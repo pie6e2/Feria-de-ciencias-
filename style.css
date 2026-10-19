@@ -1,0 +1,246 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0b1020;
+  color: #f5f7ff;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* PORTADA PENSADA PARA CELULAR */
+.hero {
+  min-height: 100svh;
+  display: flex;
+  align-items: flex-end;
+  padding: 35px 22px 45px;
+  background:
+    linear-gradient(180deg, rgba(7,12,28,.15), rgba(7,12,28,.97)),
+    url("imagenes/foto2.jpg") center/cover;
+}
+
+.hero-contenido {
+  width: 100%;
+}
+
+.etiqueta {
+  color: #9ec2ff;
+  font-size: .72rem;
+  font-weight: bold;
+  letter-spacing: 2.5px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: clamp(2.8rem, 14vw, 4.5rem);
+  line-height: .92;
+  margin-bottom: 18px;
+}
+
+.subtitulo {
+  color: #d7dceb;
+  font-size: .98rem;
+  margin-bottom: 24px;
+}
+
+.boton {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 14px 18px;
+  border-radius: 14px;
+  background: #fff;
+  color: #10182c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.sobre,
+.videos {
+  padding: 55px 20px 25px;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 1.05;
+  margin-bottom: 12px;
+}
+
+.sobre p:not(.etiqueta),
+.texto-video {
+  color: #aeb7cc;
+  font-size: .95rem;
+}
+
+/* UNA FOTO DEBAJO DE OTRA, IDEAL PARA CELULAR */
+.galeria {
+  width: 100%;
+  padding: 25px 15px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.foto {
+  background: #151d32;
+  border-radius: 17px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.08);
+  cursor: pointer;
+}
+
+.foto img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+}
+
+.info {
+  padding: 16px;
+}
+
+.info span {
+  color: #9ec2ff;
+  font-size: .72rem;
+  font-weight: bold;
+}
+
+.info h3 {
+  font-size: 1.15rem;
+  margin: 3px 0;
+}
+
+.info p {
+  color: #9fa9bf;
+  font-size: .88rem;
+}
+
+.videos {
+  border-top: 1px solid rgba(255,255,255,.08);
+  padding-bottom: 70px;
+}
+
+.video-grid {
+  margin-top: 22px;
+}
+
+.video-card {
+  background: #151d32;
+  border-radius: 17px;
+  padding: 14px;
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+.video-card video {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  margin-bottom: 13px;
+}
+
+.video-placeholder {
+  height: 230px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: #202a43;
+  font-size: 3.5rem;
+  margin-bottom: 13px;
+}
+
+.video-card h3 {
+  font-size: 1.1rem;
+}
+
+.video-card p {
+  color: #9fa9bf;
+  font-size: .88rem;
+}
+
+.visor {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.94);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  z-index: 1000;
+}
+
+.visor.activo {
+  display: flex;
+}
+
+.visor img {
+  max-width: 100%;
+  max-height: 85svh;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+#cerrar {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 50%;
+  background: #fff;
+  color: #111827;
+  font-size: 28px;
+}
+
+footer {
+  text-align: center;
+  padding: 25px 15px;
+  color: #78839a;
+  font-size: .8rem;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+
+/* En pantallas grandes sigue viéndose bien */
+@media (min-width: 700px) {
+  .hero {
+    min-height: 75vh;
+    padding: 70px 8%;
+    align-items: center;
+  }
+
+  .hero-contenido {
+    max-width: 700px;
+  }
+
+  .boton {
+    display: inline-block;
+    width: auto;
+  }
+
+  .sobre,
+  .videos {
+    max-width: 1200px;
+    margin: auto;
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+
+  .galeria {
+    max-width: 1200px;
+    margin: auto;
+    padding-left: 8%;
+    padding-right: 8%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería del Proyecto</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero-contenido">
+      <p class="etiqueta">PROYECTO ESCOLAR</p>
+      <h1>Nuestro Proyecto</h1>
+      <p class="subtitulo">Un vistazo al trabajo, la preparación y los momentos compartidos durante el proyecto.</p>
+      <a href="#galeria" class="boton">Ver galería</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="sobre">
+      <div>
+        <p class="etiqueta">GALERÍA</p>
+        <h2>Así fue el proyecto</h2>
+        <p>
+          En esta galería podés mostrar las imágenes y videos del proyecto,
+          organizados de una manera simple y moderna.
+        </p>
+      </div>
+    </section>
+
+    <section id="galeria" class="galeria">
+      <article class="foto">
+        <img src="imagenes/foto1.jpg" alt="Actividad del proyecto en el aula">
+        <div class="info">
+          <span>01</span>
+          <h3>Trabajo en equipo</h3>
+          <p>Preparando materiales y trabajando juntos.</p>
+        </div>
+      </article>
+
+      <article class="foto">
+        <img src="imagenes/foto2.jpg" alt="Preparación del aula para el proyecto">
+        <div class="info">
+          <span>02</span>
+          <h3>Preparación</h3>
+          <p>El espacio listo para comenzar las actividades.</p>
+        </div>
+      </article>
+
+      <article class="foto">
+        <img src="imagenes/foto3.jpg" alt="Presentación y decoración del proyecto">
+        <div class="info">
+          <span>03</span>
+          <h3>Presentación</h3>
+          <p>Parte de la decoración y los trabajos realizados.</p>
+        </div>
+      </article>
+
+      <article class="foto">
+        <img src="imagenes/foto4.jpg" alt="Trabajo grupal durante el proyecto">
+        <div class="info">
+          <span>04</span>
+          <h3>Momento grupal</h3>
+          <p>Compartiendo el trabajo y organizando el espacio.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="videos">
+      <p class="etiqueta">VIDEOS</p>
+      <h2>Momentos en video</h2>
+      <p class="texto-video">Cuando tengas los videos, colocá sus archivos en la carpeta <b>videos</b> y agregalos acá.</p>
+
+      <div class="video-grid">
+        <div class="video-card">
+          <div class="video-placeholder">🎬</div>
+          <h3>Video del proyecto</h3>
+          <p>Reemplazá este bloque por tu video.</p>
+          <!-- Ejemplo:
+          <video controls>
+            <source src="videos/video1.mp4" type="video/mp4">
+          </video>
+          -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="visor" class="visor">
+    <button id="cerrar" aria-label="Cerrar">×</button>
+    <img id="imagenGrande" src="" alt="Imagen ampliada">
+  </div>
+
+  <footer>
+    <p>Proyecto escolar · Galería</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
